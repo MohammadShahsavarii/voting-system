@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Voting System</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        button { margin: 5px; padding: 10px; cursor: pointer; }
+        input { padding: 8px; margin: 5px; width: 200px; }
+        #walletInfo { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Blockchain Voting System</h1>
+
+    <h3>Connected Account:</h3>
+    <div id="walletInfo">Loading...</div>
+
+    <h3>Vote for a Candidate:</h3>
+    <input type="text" id="candidateInput" placeholder="Enter candidate name">
+    <button onclick="window.vote(document.getElementById('candidateInput').value)">✅ Vote</button>
+    
+    <h3>Check Votes:</h3>
+    <input type="text" id="checkCandidate" placeholder="Enter candidate name">
+    <button onclick="window.getVotes(document.getElementById('checkCandidate').value)">📊 Check Votes</button>
+
+    <h3>Contract Management:</h3>
+    <button onclick="window.getContractBalance()">💰 Get Contract Balance</button>
+    <button onclick="window.donateToContract('0.01')">💸 Donate 0.01 ETH</button>
+
+    <script src="contract.js"></script>
+    <script src="interaction.js"></script>
+
+</body>
+</html>
