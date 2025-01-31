@@ -21,3 +21,9 @@ npx hardhat clean
 
 # Compile the smart contracts
 npx hardhat compile
+
+# Start a local Ethereum blockchain
+npx hardhat node
+
+# Deploy the smart contracts using Hardhat
+npx hardhat run scripts/deploy.js
